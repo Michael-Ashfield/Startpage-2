@@ -1,0 +1,95 @@
+<!doctype html>
+<!-- Ive added a few links to each dropdown list, simply copy the <a> element in each dropdown list and fill it bout yourself -->
+<!-- This has been made for and only tested on Google Chrome, any crazy stuff may happen on Firefox and other browsers or sizes -->
+<html>
+    <head>
+        <title>Welcome</title>
+        <link rel="stylesheet" href="main.css" type="text/css">
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+        <link rel="shortcut icon" href="images/chrome-32.ico"> <!--Change me to something better -->
+        <script> //I didn't make this so forgive me if it breaks stuff
+            function init() {  
+                setInterval(startTime, 500);
+            }
+             
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('time').innerHTML =
+                h + ":" + m + ":" + s;
+                
+            }
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+        </script>
+    </head>
+    
+    <body onload="init()">
+
+    <div id="wrapper">  
+        
+        <header>
+            <div id='time'></div> <!-- Places clock at id 'time'-->
+        </header>
+
+        <div id="mainBar"> <!-- Everything is a list floating to the right -->
+            <ul>
+                <li> 
+                    <div id="search"> <!-- Search bar and button -->
+                        <form method="get" action="http://www.google.com/search"> 
+                            <input type="text" name="google_search" size="30" maxlength="255" value=""/><input type="submit" value="Search" />
+                        </form>
+                    </div>
+                </li> <!-- end search -->
+                <li>
+                    <div class="media"> <!-- Social Media and General Media -->
+                        <button class="media_drop">Media</button>
+                        <div class="media_content">
+                            <a href="https//:Facebook.com">Facebook</a>
+                            <a href="https//:www.google.co.uk">Gmail</a>
+                            <a href="https//:Twitter.com">Twitter</a>
+                            <a href="https://Youtube.com">Youtube</a> 
+                        </div>
+                    </div>
+                </li> <!-- end media -->
+                <li>
+                    <div class="tools"> <!-- Tools that arnt social such as google maps -->
+                        <button class="tools_drop">Tools</button>
+                        <div class="tools_content">
+                            <a href="www.google.com">Drive</a>
+                            <a href="https://www.google.co.uk/maps">Maps</a>
+                        </div>
+                    </div>
+                </li> <!-- end tools -->
+                <li>
+                    <div class="games"> <!-- Games and game stuff -->
+                        <button class="games_drop">Games</button>
+                        <div class="games_content">
+                            <a href="http://agar.io/">Agar</a>
+                            <a href="https://diep.io/">Diep</a>
+                        </div>
+                    </div>
+                </li> <!-- end games -->
+                <li>
+                    <div class="forum"> <!-- Boards adn forums, uses the class 'forum' -->
+                        <button class="forum_drop">Boards</button>
+                        <div class="forum_content">
+                            <a href="https://boards.4chan.org/wg/">wg</a>
+                        </div>
+                    </div>
+                </li> <!-- end forum -->
+            </ul>
+
+        </div>
+
+    </div> <!-- end wrapper -->
+    </body>
+
+</html> 

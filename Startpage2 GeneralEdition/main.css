@@ -1,0 +1,281 @@
+/* Main body and wrapper */
+body {
+    background-image: url(images/wallpaper.png);
+    background-color: black;
+    font-family: 'VT323', monospace;
+    color: black;
+    font-size: 25px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 99vw;
+    height: 98vh;
+}
+
+/*----------------------------------------------*/
+/*Header and clock, customising this doesn't break too much*/
+#time{
+    border: 5px solid #FFAA88;
+    background-color: #FFD195;
+    width: 200px ;
+    height: 50px;
+    font-size: 50px;
+    text-align: center;
+    float: right;
+    display: block;
+}
+
+header {
+    height: 56px;
+}
+
+/*----------------------------------------------*/
+/*Search Bar, changing some of the sizes may break everything*/
+#search {
+    float: right;
+    position: relative;
+    height: 40px;
+    color: black;
+}
+
+input {
+    display: inline-block;
+    color: black;
+    border: none;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    background-color: rgba(0,0,0,0);
+}
+
+input[type=submit]{
+    padding: 8px;
+}
+
+input[type=submit]:hover{
+    background-color: #FFAA88; 
+}
+input[type=text] {
+    background-image: url('images/search-32.png');
+    background-size: 25px;
+    background-position: 10px 50%; 
+    background-repeat: no-repeat;
+    padding: 8px;
+    padding-left: 40px;
+    outline: none;
+}
+
+/*----------------------------------------------*/
+/*Nav Bar, play with this if you like but down complane if it breaks everything*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+#mainBar {
+    display: block;
+    height: 40px;
+    background-color:#FFD195;
+    margin: 40px auto;
+    border-top: 10px solid #FFAA88;
+    border-bottom: 10px solid #FFAA88;
+}
+
+/*----------------------------------------------*/
+/*float dropdown items to make it work, important*/
+a {
+    float: right;
+}
+
+/*----------------------------------------------*/
+/*Media Dropdown Menu // Copy this list and replace each "media" with a name, co the same for a <li> with the same name to make a new dropdown menu*/
+.media {
+    display: inline-block;
+    float: right;
+    position: relative;
+    height: 40px;
+}
+
+.media_drop {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    width: 150px;
+    font-family: 'VT323', monospace;
+    color: black;
+    font-size: 25px;
+    padding: 5%;
+}
+
+.media_content {
+    display: none;
+    position: absolute;
+    background-color: #FFD195;
+    min-width: 150px;
+    overflow: auto;
+}
+    
+.media_content a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 25px;
+    width: 100px;
+}
+
+.media_content a:hover {
+    background-color:#FFAA88;
+}
+
+.media:hover .media_content {
+    display: block;
+}
+
+.media:hover .media_drop {
+    background-color: #FFAA88;
+}
+
+/*----------------------------------------------*/
+/*tools Dropdown Menu*/
+.tools {
+    display: inline-block;
+    float: right;
+    position: relative;
+    height: 40px;
+}
+
+.tools_drop {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    width: 150px;
+    font-family: 'VT323', monospace;
+    color: black;
+    font-size: 25px;
+    padding: 5%;
+}
+
+.tools_content {
+    display: none;
+    position: absolute;
+    background-color: #FFD195;
+    min-width: 150px;
+    overflow: auto;
+}
+    
+.tools_content a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 25px;
+    width: 100px;
+}
+
+.tools_content a:hover {
+    background-color:#FFAA88;
+}
+
+.tools:hover .tools_content {
+    display: block;
+}
+
+.tools:hover .tools_drop {
+    background-color: #FFAA88;
+}
+
+/*----------------------------------------------*/
+/*games Dropdown Menu*/
+.games {
+    display: inline-block;
+    float: right;
+    position: relative;
+    height: 40px;
+}
+
+.games_drop {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    width: 150px;
+    font-family: 'VT323', monospace;
+    color: black;
+    font-size: 25px;
+    padding: 5%;
+}
+
+.games_content {
+    display: none;
+    position: absolute;
+    background-color: #FFD195;
+    min-width: 150px;
+    overflow: auto;
+}
+    
+.games_content a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 25px;
+    width: 100px;
+}
+
+.games_content a:hover {
+    background-color:#FFAA88;
+}
+
+.games:hover .games_content {
+    display: block;
+}
+
+.games:hover .games_drop {
+    background-color: #FFAA88;
+}
+
+/*----------------------------------------------*/
+/*forum Dropdown Menu*/
+.forum {
+    display: inline-block;
+    float: right;
+    position: relative;
+    height: 40px;
+}
+
+.forum_drop {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    width: 150px;
+    font-family: 'VT323', monospace;
+    color: black;
+    font-size: 25px;
+    padding: 5%;
+}
+
+.forum_content {
+    display: none;
+    position: absolute;
+    background-color: #FFD195;
+    min-width: 150px;
+    overflow: auto;
+}
+    
+.forum_content a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 25px;
+    width: 100px;
+}
+
+.forum_content a:hover {
+    background-color:#FFAA88;
+}
+
+.forum:hover .forum_content {
+    display: block;
+}
+
+.forum:hover .forum_drop {
+    background-color: #FFAA88;
+}
