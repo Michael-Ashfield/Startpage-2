@@ -9,7 +9,7 @@ body {
 
 #wrapper {
     margin: 0 auto;
-    width: 99vw;
+    width: 95vw;
     height: 98vh;
 }
 
@@ -84,6 +84,7 @@ li {
     margin: 40px auto;
     border-top: 10px solid #FFAA88;
     border-bottom: 10px solid #FFAA88;
+    padding-right: 30px;
 }
 
 /*----------------------------------------------*/
