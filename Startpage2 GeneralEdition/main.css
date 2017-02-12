@@ -3,7 +3,7 @@ body {
     background-image: url(images/wallpaper.png);
     background-color: black;
     font-family: 'VT323', monospace;
-    color: black;
+    color: var(--text-color);
     font-size: 25px;
 }
 
@@ -13,11 +13,18 @@ body {
     height: 98vh;
 }
 
+/*Color control*/
+:root {
+    --primary-color: #FFAA88;
+    --secondary-color: #FFD195;
+    --text-color: black;
+}
+
 /*----------------------------------------------*/
 /*Header and clock, customising this doesn't break too much*/
 #time{
-    border: 5px solid #FFAA88;
-    background-color: #FFD195;
+    border: 5px solid var(--primary-color);
+    background-color: var(--secondary-color);
     width: 200px ;
     height: 50px;
     font-size: 50px;
@@ -36,12 +43,11 @@ header {
     float: right;
     position: relative;
     height: 40px;
-    color: black;
+    color: var(--text-color);
 }
 
 input {
     display: inline-block;
-    color: black;
     border: none;
     font-family: 'VT323', monospace;
     font-size: 25px;
@@ -53,7 +59,7 @@ input[type=submit]{
 }
 
 input[type=submit]:hover{
-    background-color: #FFAA88; 
+    background-color: var(--primary-color); 
 }
 input[type=text] {
     background-image: url('images/search-32.png');
@@ -80,203 +86,54 @@ li {
 #mainBar {
     display: block;
     height: 40px;
-    background-color:#FFD195;
+    background-color: var(--secondary-color);
     margin: 40px auto;
-    border-top: 10px solid #FFAA88;
-    border-bottom: 10px solid #FFAA88;
-    padding-right: 30px;
+    border-top: 10px solid var(--primary-color);
+    border-bottom: 10px solid var(--primary-color);
 }
 
 /*----------------------------------------------*/
-/*float dropdown items to make it work, important*/
-a {
-    float: right;
-}
-
-/*----------------------------------------------*/
-/*Media Dropdown Menu // Copy this list and replace each "media" with a name, co the same for a <li> with the same name to make a new dropdown menu*/
-.media {
+/*Menu styling for each menu list*/
+.menu {
     display: inline-block;
     float: right;
     position: relative;
     height: 40px;
 }
 
-.media_drop {
+.menu_drop {
     background-color: rgba(0,0,0,0);
     border: none;
     width: 150px;
     font-family: 'VT323', monospace;
-    color: black;
     font-size: 25px;
-    padding: 5%;
+    height: 100%;
 }
 
-.media_content {
+.menu_content {
     display: none;
     position: absolute;
-    background-color: #FFD195;
+    background-color: var(--secondary-color);
     min-width: 150px;
-    overflow: auto;
+    overflow: hidden;
 }
     
-.media_content a{
-    color: black;
+.menu_content a{
+    color: var(--text-color);
     text-decoration: none;
     display: block;
-    padding: 10px 25px;
+    padding: 8px 25px;
     width: 100px;
 }
 
-.media_content a:hover {
-    background-color:#FFAA88;
+.menu_content a:hover {
+    background-color: var(--primary-color);
 }
 
-.media:hover .media_content {
+.menu:hover .menu_content {
     display: block;
 }
 
-.media:hover .media_drop {
-    background-color: #FFAA88;
-}
-
-/*----------------------------------------------*/
-/*tools Dropdown Menu*/
-.tools {
-    display: inline-block;
-    float: right;
-    position: relative;
-    height: 40px;
-}
-
-.tools_drop {
-    background-color: rgba(0,0,0,0);
-    border: none;
-    width: 150px;
-    font-family: 'VT323', monospace;
-    color: black;
-    font-size: 25px;
-    padding: 5%;
-}
-
-.tools_content {
-    display: none;
-    position: absolute;
-    background-color: #FFD195;
-    min-width: 150px;
-    overflow: auto;
-}
-    
-.tools_content a{
-    color: black;
-    text-decoration: none;
-    display: block;
-    padding: 10px 25px;
-    width: 100px;
-}
-
-.tools_content a:hover {
-    background-color:#FFAA88;
-}
-
-.tools:hover .tools_content {
-    display: block;
-}
-
-.tools:hover .tools_drop {
-    background-color: #FFAA88;
-}
-
-/*----------------------------------------------*/
-/*games Dropdown Menu*/
-.games {
-    display: inline-block;
-    float: right;
-    position: relative;
-    height: 40px;
-}
-
-.games_drop {
-    background-color: rgba(0,0,0,0);
-    border: none;
-    width: 150px;
-    font-family: 'VT323', monospace;
-    color: black;
-    font-size: 25px;
-    padding: 5%;
-}
-
-.games_content {
-    display: none;
-    position: absolute;
-    background-color: #FFD195;
-    min-width: 150px;
-    overflow: auto;
-}
-    
-.games_content a{
-    color: black;
-    text-decoration: none;
-    display: block;
-    padding: 10px 25px;
-    width: 100px;
-}
-
-.games_content a:hover {
-    background-color:#FFAA88;
-}
-
-.games:hover .games_content {
-    display: block;
-}
-
-.games:hover .games_drop {
-    background-color: #FFAA88;
-}
-
-/*----------------------------------------------*/
-/*forum Dropdown Menu*/
-.forum {
-    display: inline-block;
-    float: right;
-    position: relative;
-    height: 40px;
-}
-
-.forum_drop {
-    background-color: rgba(0,0,0,0);
-    border: none;
-    width: 150px;
-    font-family: 'VT323', monospace;
-    color: black;
-    font-size: 25px;
-    padding: 5%;
-}
-
-.forum_content {
-    display: none;
-    position: absolute;
-    background-color: #FFD195;
-    min-width: 150px;
-    overflow: auto;
-}
-    
-.forum_content a{
-    color: black;
-    text-decoration: none;
-    display: block;
-    padding: 10px 25px;
-    width: 100px;
-}
-
-.forum_content a:hover {
-    background-color:#FFAA88;
-}
-
-.forum:hover .forum_content {
-    display: block;
-}
-
-.forum:hover .forum_drop {
-    background-color: #FFAA88;
+.menu:hover .menu_drop {
+    background-color: var(--primary-color);
 }

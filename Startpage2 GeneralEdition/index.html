@@ -8,30 +8,10 @@
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
         <link rel="shortcut icon" href="images/chrome-32.ico"> <!--Change me to something better -->
-        <script> //I didn't make this so forgive me if it breaks stuff
-            function init() {  
-                setInterval(startTime, 500);
-            }
-             
-            function startTime() {
-                var today = new Date();
-                var h = today.getHours();
-                var m = today.getMinutes();
-                var s = today.getSeconds();
-                m = checkTime(m);
-                s = checkTime(s);
-                document.getElementById('time').innerHTML =
-                h + ":" + m + ":" + s;
-                
-            }
-            function checkTime(i) {
-                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-                return i;
-            }
-        </script>
+        <script src="mainjs.js" type="text/javascript"></script>
     </head>
     
-    <body onload="init()">
+    <body onload="startTime()">
 
     <div id="wrapper">  
         
@@ -49,9 +29,9 @@
                     </div>
                 </li> <!-- end search -->
                 <li>
-                    <div class="media"> <!-- Social Media and General Media -->
-                        <button class="media_drop">Media</button>
-                        <div class="media_content">
+                    <div class="menu"> <!-- Social Media and General Media -->
+                        <button class="menu_drop">Media</button>
+                        <div class="menu_content">
                             <a href="https://www.facebook.com/">Facebook</a>
                             <a href="https//:www.google.co.uk">Gmail</a>
                             <a href="https://www.twitter.com/?lang=en">Twitter</a>
@@ -60,27 +40,27 @@
                     </div>
                 </li> <!-- end media -->
                 <li>
-                    <div class="tools"> <!-- Tools that arnt social such as google maps -->
-                        <button class="tools_drop">Tools</button>
-                        <div class="tools_content">
+                    <div class="menu"> <!-- Tools that arnt social such as google maps -->
+                        <button class="menu_drop">Tools</button>
+                        <div class="menu_content">
                             <a href="https://www.google.com">Drive</a>
                             <a href="https://www.google.co.uk/maps">Maps</a>
                         </div>
                     </div>
                 </li> <!-- end tools -->
                 <li>
-                    <div class="games"> <!-- Games and game stuff -->
-                        <button class="games_drop">Games</button>
-                        <div class="games_content">
+                    <div class="menu"> <!-- Games and game stuff -->
+                        <button class="menu_drop">Games</button>
+                        <div class="menu_content">
                             <a href="http://www.agar.io/">Agar</a>
                             <a href="https://www.diep.io/">Diep</a>
                         </div>
                     </div>
                 </li> <!-- end games -->
                 <li>
-                    <div class="forum"> <!-- Boards and forums, uses the class 'forum' -->
-                        <button class="forum_drop">Boards</button>
-                        <div class="forum_content">
+                    <div class="menu"> <!-- Boards and forums, uses the class 'forum' -->
+                        <button class="menu_drop">Boards</button>
+                        <div class="menu_content">
                             <a href="https://www.boards.4chan.org/wg/">wg</a>
                         </div>
                     </div>
