@@ -1,4 +1,3 @@
-##12 Hour Clock script##
 function startTime(){
     var today = new Date();
     var curr_hour = today.getHours();
