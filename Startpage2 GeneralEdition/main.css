@@ -1,23 +1,25 @@
-/* Main body and wrapper */
-body {
-    background-image: url(images/wallpaper.png);
-    background-color: black;
-    font-family: 'VT323', monospace;
-    color: var(--text-color);
-    font-size: 25px;
-}
-
-#wrapper {
-    margin: 0 auto;
-    width: 95vw;
-    height: 98vh;
-}
-
-/*Color control*/
+/*Variables*/
 :root {
     --primary-color: #FFAA88;
     --secondary-color: #FFD195;
     --text-color: black;
+}
+
+/* Main body and wrapper */
+body {
+    background-image: url(images/wallpaper.png);
+    background-repeat: no-repeat;
+    background-size:100vw 100vh;
+    background-position:top;
+    background-color: black;
+    font-family: 'VT323', monospace;
+    color: var(--text-color);
+    font-size: 25px;
+    overflow: hidden;
+}
+
+#wrapper {
+    margin: 0 auto;gi
 }
 
 /*----------------------------------------------*/
@@ -42,15 +44,15 @@ header {
 #search {
     float: right;
     position: relative;
-    height: 40px;
+    height: 100%;
     color: var(--text-color);
 }
 
 input {
     display: inline-block;
     border: none;
-    font-family: 'VT323', monospace;
-    font-size: 25px;
+    font-family: inherit;
+    font-size: inherit;
     background-color: rgba(0,0,0,0);
 }
 
@@ -59,12 +61,12 @@ input[type=submit]{
 }
 
 input[type=submit]:hover{
-    background-color: var(--primary-color); 
+    background-color: var(--primary-color);
 }
 input[type=text] {
     background-image: url('images/search-32.png');
-    background-size: 25px;
-    background-position: 10px 50%; 
+    background-size: 7%;
+    background-position: 10px 50%;
     background-repeat: no-repeat;
     padding: 8px;
     padding-left: 40px;
@@ -72,7 +74,7 @@ input[type=text] {
 }
 
 /*----------------------------------------------*/
-/*Nav Bar, play with this if you like but down complane if it breaks everything*/
+/*Nav Bar, play with this if you like but don' complain if it breaks everything*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -105,8 +107,8 @@ li {
     background-color: rgba(0,0,0,0);
     border: none;
     width: 150px;
-    font-family: 'VT323', monospace;
-    font-size: 25px;
+    font-family: inherit;
+    font-size: inherit;
     height: 100%;
 }
 
@@ -117,7 +119,7 @@ li {
     min-width: 150px;
     overflow: hidden;
 }
-    
+
 .menu_content a{
     color: var(--text-color);
     text-decoration: none;
